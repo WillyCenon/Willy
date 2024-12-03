@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade Wizard Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, red, white);
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #gradewizard1 {
+      font-size: 50px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 60px;
+      width: 400px;
+    }
+
+    .container img {
+      max-width: 100px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .container img:hover {
+      transform: scale(1.5); /* Zoom the image */
+    }
+
+    .container h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container label {
+      display: block;
+      text-align: left;
+      margin: 10px 0 5px;
+      font-size: 14px;
+    }
+
+    .container input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .button ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .button ul li {
+      margin: 10px 0;
+    }
+
+    .button ul li a {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: #b22222;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .button ul li a:hover {
+      background-color: #8b0000;
+    }
+
+    a {
+      font-size: 14px;
+      color: #ff4500;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="gradewizard1">Grade Warrior</h1>
+  </header>
+
+  <div class="container">
+    <a href="https://apps.apple.com/ph/app/capitol-university-lecturio/id6446989598" target="_blank">
+      <img src="logo.png" alt="Logo">
+    </a>
+    <h2>Login</h2>
+    <form action="dashboard.html" method="get">
+      <label for="user">User:</label>
+      <input type="text" id="user" name="user" placeholder="Enter your username" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      
+      <div class="button">
+        <ul>
+          <li><a href="dashboard.html" id="login">Login</a></li>
+        </ul>
+      </div>
+    </form>
+    <a href="#">Forgot Password?</a>
+  </div>
+</body>
+</html>

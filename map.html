@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+        }
+        .sidebar {
+            background-color: #ff0000; /* Red sidebar */
+            color: white;
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between items and search */
+        }
+
+        /* Logo Styling */
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            align-self: center; /* Center the logo */
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #cc0000; /* Darker red on hover */
+        }
+
+        /* Search Bar Styling */
+        .search-container {
+            margin-top: auto; /* Pushes the search bar to the bottom */
+        }
+
+        .search-container input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            width: 75%;
+        }
+
+        .search-container button {
+            padding: 10px;
+            background-color: #ff0000;
+            color: white;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .search-container button:hover {
+            background-color: #cc0000;
+        }
+
+        .content {
+            margin-left: 270px; /* Adjust content area to account for sidebar */
+            padding: 20px;
+            text-align: center; /* Center content */
+            width: calc(100% - 270px); /* Subtract sidebar width */
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .profile-image {
+            margin-bottom: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .profile-image img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .profile-info h2 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Logo at the top of the sidebar -->
+        <img src="C:\Users\jhayp\OneDrive\Desktop\WILLYCENON\logo.png" alt="Logo">
+
+        <h2>Menu</h2>
+
+        <!-- Menu items -->
+        <a href="profile.html">Profile</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="map.html">Map</a>
+
+        <!-- Search bar at the bottom -->
+        <div class="search-container">
+            <input type="text" placeholder="Search..." />
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>School Location</h1>
+
+        <!-- Map Section -->
+        <section class="section" id="section_240882672">
+            <div class="bg section-bg fill bg-fill bg-loaded">
+                <div class="section-bg-overlay absolute fill"></div>
+            </div>
+
+            <div class="section-content relative">
+                <div class="row row-collapse row-full-width" id="row-1797239182">
+                    <div id="col-1048058798" class="col small-12 large-12">
+                        <div class="col-inner">
+                            <p>
+                                <iframe 
+                                    loading="lazy" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2790.3214615296297!2d124.65073630274956!3d8.488640473227147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2e7ff6d2ec9%3A0x180566d5585d5301!2sCapitol%20University!5e0!3m2!1sen!2sph!4v1594352291969!5m2!1sen!2sph" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    aria-hidden="false" 
+                                    tabindex="0" 
+                                    width="100%" 
+                                    height="600" 
+                                    frameborder="0">
+                                </iframe>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

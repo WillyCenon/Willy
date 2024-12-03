@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            color: #333;
+        }
+        .sidebar {
+            background-color: #ff0000;
+            color: white;
+            width: 250px; /* Sidebar width */
+            height: 100vh;
+            position: fixed;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Adjusts spacing to push search bar to the bottom */
+        }
+
+        /* Logo styling */
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            align-self: center; /* Center the logo */
+        }
+
+        /* Sidebar Menu Title */
+        .sidebar h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: left;
+            width: 100%;
+        }
+
+        /* Sidebar Menu Items */
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px 20px;
+            margin: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: left; /* Align text to the left */
+        }
+        .sidebar a:hover {
+            background-color: #cc0000;
+        }
+
+        /* Search Bar styling (at the bottom of the sidebar) */
+        .search-container {
+            margin-top: auto; /* Pushes the search bar to the bottom */
+        }
+        .search-container input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            width: 75%;
+        }
+        .search-container button {
+            padding: 10px;
+            background-color: #ff0000;
+            color: white;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .search-container button:hover {
+            background-color: #cc0000;
+        }
+
+        .content {
+            margin-left: 270px; /* Adjust content area to account for sidebar */
+            padding: 20px;
+            text-align: center;
+            width: calc(100% - 270px);
+        }
+
+        /* User Profile and Section */
+        .user-section {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .user-info {
+            text-align: left;
+            margin-right: 15px;
+        }
+        .user-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .user-profile {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ff0000;
+        }
+        .user-profile img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* New sections for the criteria */
+        .map-container, .video-container, .slideshow-container, .gallery-container, .social-icons {
+            margin-bottom: 30px;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+        }
+
+        /* Slideshow */
+        .slideshow-container {
+            position: relative;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery-container img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Social Media Icons */
+        .social-icons a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .social-icons a:hover {
+            color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Logo at the top of the sidebar -->
+        <img src="C:\Users\jhayp\OneDrive\Desktop\WILLYCENON\logo.png" alt="Logo">
+
+        <!-- Sidebar Menu Title -->
+        <h2>Menu</h2>
+
+        <!-- Menu items below the logo -->
+        <a href="profile.html">Profile</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="map.html">Map</a>
+        
+        <!-- Search Bar at the bottom of the sidebar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="user-section">
+            <div class="user-info">
+                <h3>User: Willy Cenon</h3>
+            </div>
+            <!-- Wrap the user profile image in a link to the profile page -->
+            <div class="user-profile">
+                <a href="profile.html">
+                    <img src="C:\Users\jhayp\OneDrive\Desktop\WILLYCENON\user.jpg" alt="User Profile Picture">
+                </a>
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-container" id="video">
+            <h3>CAPITAL UNIVERSITY</h3>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/mbRAo9TUbaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Slideshow Section -->
+        <div class="slideshow-container" id="slideshow">
+            <img class="slides" src="file:///C:/Users/jhayp/OneDrive/Desktop/WILLYCENON/image%201.jpg" alt="Slide 1">
+            <img class="slides" src="file:///C:/Users/jhayp/OneDrive/Desktop/WILLYCENON/image%202.jpg" alt="Slide 2">
+            <img class="slides" src="file:///C:/Users/jhayp/OneDrive/Desktop/WILLYCENON/image%203.jpg" alt="Slide 3">
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-container" id="gallery">
+            <img src="file:///C:/Users/jhayp/OneDrive/Desktop/WILLYCENON/image%201.jpg" alt="Image 1">
+            <img src="file:///C:/Users/jhayp/OneDrive/Desktop/WILLYCENON/image%202.jpg" alt="Image 2">
+            <img src="file:///C:/Users/jhayp/OneDrive/Desktop/WILLYCENON/image%203.jpg" alt="Image 3">
+        </div>
+
+    </div>
+
+    <script>
+        // Slideshow functionality
+        let slideIndex = 0;
+        function showSlides() {
+            let slides = document.querySelectorAll(".slides");
+            slides.forEach((slide, index) => {
+                slide.style.display = "none";
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+        showSlides();
+    </script>
+</body>
+</html>
